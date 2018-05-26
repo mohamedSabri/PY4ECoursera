@@ -16,7 +16,7 @@ while True:
     if smallest is None:
         smallest = integer_Value
     elif smallest > integer_Value :
-        smallest = integer_Value 
+        smallest = integer_Value
 
 print("Maximum is", largest)
 print("Minimum is",smallest)
