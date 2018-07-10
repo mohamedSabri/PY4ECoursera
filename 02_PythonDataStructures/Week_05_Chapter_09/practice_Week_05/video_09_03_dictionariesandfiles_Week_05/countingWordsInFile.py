@@ -7,11 +7,13 @@ for line in fileHandle:
     words = line.split()
     if words: # if words != []
         for word in words:
+            # idiom: retrieve/create/update counter
             dictionary[word] = dictionary.get(word,0) + 1
+
+# find the most common word
 
 maxRepeatedCount = None
 maxRepeatedWord = None
-
 for key,value in dictionary.items():
     if maxRepeatedCount is None or maxRepeatedCount < value:
         maxRepeatedWord = key
@@ -19,5 +21,3 @@ for key,value in dictionary.items():
 
 print(dictionary)
 print('Max Repeated Word:' + maxRepeatedWord + ' ,Max Repeated Count:' + str(maxRepeatedCount))
-
-
